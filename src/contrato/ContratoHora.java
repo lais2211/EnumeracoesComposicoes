@@ -37,10 +37,8 @@ public class ContratoHora {
         this.horas = horas;
     }
 
-    Double horasTrabalhadas;
-
-    {
-        horasTrabalhadas = valor * horas;
+    public Double totalHorasValor (){
+        return horas*valor;
     }
 
 }

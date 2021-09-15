@@ -4,6 +4,7 @@ import departamento.Departamento;
 import nivel.WorkLevel;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Funcionario {
@@ -65,6 +66,21 @@ public class Funcionario {
         contratos.remove(contrato);
     }
 
+    public Double receber (int ano, int mes) {
+        Double soma = salarioBase;
+        Calendar calendario =  Calendar.getInstance();
+        for (ContratoHora c: contratos) {
+            calendario.setTime(c.getData());
+            int c_ano = calendario.get(Calendar.YEAR);
+                    int c_mes= 1+ calendario.get(Calendar.MONTH);
+                    if (ano == c_ano && mes == c_mes){
+                        soma+=c.totalHorasValor();}
+
+                    }
+        return soma;
+
+        }
+    }
 
 
-}
+
