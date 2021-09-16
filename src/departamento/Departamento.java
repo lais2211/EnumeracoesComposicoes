@@ -15,4 +15,8 @@ public class Departamento {
         this.nome = nome;
     }
 
+    @Override
+    public String toString() {
+        return nome;
+    }
 }
