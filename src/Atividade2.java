@@ -44,7 +44,7 @@ public class Atividade2 {
         }
 
         System.out.println();
-        System.out.println("Digite o ano e mês que gostaria de calcular salario: (DD/YYYY)");
+        System.out.println("Digite o ano e mês que gostaria de calcular salario: (MM/YYYY)");
         String anoeMes = sc.next();
         int mes = Integer.parseInt(anoeMes.substring(0,2));
                 int ano= Integer.parseInt(anoeMes.substring(3));
@@ -52,7 +52,7 @@ public class Atividade2 {
 
         System.out.println("Nome: " + func.getNome());
         System.out.println("Departamento: "+ func.getDepartamento().getNome());
-        System.out.println("Salario de: "+ anoeMes+ ", no valor de: "+ func.receber(ano,mes));
+        System.out.println("Salario de: "+ anoeMes+ "no valor de: " + func.receber(ano,mes));
 
         sc.close();
         }
