@@ -1,7 +1,6 @@
 import contrato.ContratoHora;
 import contrato.Funcionario;
 import departamento.Departamento;
-import jdk.swing.interop.SwingInterOpUtils;
 import nivel.WorkLevel;
 
 import java.text.ParseException;
@@ -31,7 +30,7 @@ public class Atividade2 {
                 int n = sc.nextInt();
 
         for (int i = 0; i<n; i++) {
-            System.out.println("Digite a data do contrato "+ i+ ":");
+            System.out.println("Digite a data do contrato "+ (i+1)+ ":");
             System.out.println("Exemplo: (DD/MM/YYYY)");
             Date contratoData = dataFormato.parse(sc.next());
             System.out.println("Valor por hora:");
@@ -53,7 +52,7 @@ public class Atividade2 {
 
         System.out.println("Nome: " + func.getNome());
         System.out.println("Departamento: "+ func.getDepartamento().getNome());
-        System.out.println("Salario de: "+ anoeMes+ ", no valor de: "+func.receber(ano,mes));
+        System.out.println("Salario de: "+ anoeMes+ ", no valor de: "+ func.receber(ano,mes));
 
         sc.close();
         }

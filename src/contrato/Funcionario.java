@@ -69,28 +69,20 @@ public class Funcionario {
     public Double receber (int ano, int mes) {
         Double soma = salarioBase;
         Calendar calendario =  Calendar.getInstance();
-        for (ContratoHora c: contratos) {
+        for (ContratoHora c : contratos) {
             calendario.setTime(c.getData());
             int c_ano = calendario.get(Calendar.YEAR);
                     int c_mes= 1+ calendario.get(Calendar.MONTH);
-                    if (ano == c_ano && mes == c_mes){
-                        soma+=c.totalHorasValor();}
-
+                    if (mes == c_mes && ano == c_ano ){
+                        soma += c.totalHorasValor();
                     }
+        }
         return soma;
 
         }
 
-    @Override
-    public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", nivel=" + nivel +
-                ", salarioBase=" + salarioBase +
-                ", departamento=" + departamento +
-                '}';
-    }
-}
+     }
+
 
 
 
