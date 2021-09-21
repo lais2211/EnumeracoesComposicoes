@@ -43,6 +43,7 @@ public class Atividade3 {
 
             Produto produto = new Produto(nome,preço);
             PedidoItens quant = new PedidoItens(quantidade);
+            quant.addProdutos(produto);
         }
 
 

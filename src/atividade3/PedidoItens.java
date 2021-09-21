@@ -50,4 +50,9 @@ public class PedidoItens {
     public void setStatus(StatusPedido status) {
         this.status = status;
     }
+
+    public void addProdutos (Produto produto) {produtos.add(produto);}
+    public void removeProdutos (Produto produto) {produtos.remove(produto);}
+
+
 }
