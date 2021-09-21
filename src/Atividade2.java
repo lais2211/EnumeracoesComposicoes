@@ -1,7 +1,7 @@
-import contrato.ContratoHora;
-import contrato.Funcionario;
-import departamento.Departamento;
-import nivel.WorkLevel;
+import atividade2.ContratoHora;
+import atividade2.Funcionario;
+import atividade2.Departamento;
+import atividade2.WorkLevel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -52,7 +52,7 @@ public class Atividade2 {
 
         System.out.println("Nome: " + func.getNome());
         System.out.println("Departamento: "+ func.getDepartamento().getNome());
-        System.out.println("Salario de: "+ anoeMes+ "no valor de: " + func.receber(ano,mes));
+        System.out.println("Salario de: "+ anoeMes+ " no valor de: " + func.receber(ano,mes));
 
         sc.close();
         }

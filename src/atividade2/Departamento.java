@@ -1,4 +1,4 @@
-package departamento;
+package atividade2;
 
 public class Departamento {
     private String nome;

@@ -1,6 +1,6 @@
-package pedido;
+package atividade1;
 
-import entrega.Entrega;
+import atividade1.Entrega;
 
 import java.util.Date;
 

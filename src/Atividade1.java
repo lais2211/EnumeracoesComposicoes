@@ -1,5 +1,5 @@
-import entrega.Entrega;
-import pedido.Pedido;
+import atividade1.Entrega;
+import atividade1.Pedido;
 
 import java.util.Date;
 

@@ -1,7 +1,4 @@
-package contrato;
-
-import departamento.Departamento;
-import nivel.WorkLevel;
+package atividade2;
 
 import java.util.ArrayList;
 import java.util.Calendar;

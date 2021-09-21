@@ -1,4 +1,4 @@
-package contrato;
+package atividade2;
 
 import java.util.Date;
 

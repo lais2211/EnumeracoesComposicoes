@@ -1,4 +1,4 @@
-package nivel;
+package atividade2;
 
 public enum WorkLevel {
     JUNIOR,
