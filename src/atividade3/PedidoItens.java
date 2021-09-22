@@ -6,15 +6,20 @@ import java.util.List;
 public class PedidoItens {
 
     private Integer quantidade;
-    private Double preço2;
+    private Double preço;
+    private Produto produto;
+
     private StatusPedido status;
 
-    List <Produto> produtos = new ArrayList<>();
+    List<Produto> produtos = new ArrayList<>();
 
-    public PedidoItens (Integer quantidade) {
+    public PedidoItens (){}
+
+    public PedidoItens(Integer quantidade, Double preço, Produto produto) {
 
         this.quantidade = quantidade;
-
+        this.preço = preço;
+        this.produto = produto;
     }
 
     public Integer getQuantidade() {
@@ -25,19 +30,27 @@ public class PedidoItens {
         this.quantidade = quantidade;
     }
 
-    public Double getPreço2() {
-        return preço2;
+    public Double getPreço() {
+        return preço;
     }
 
-    public void setPreço2(Double preço2) {
-        this.preço2 = preço2;
+    public void setPreço(Double preço) {
+        this.preço = preço;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
     }
 
     public List<Produto> getProdutos() {
         return produtos;
     }
 
-    public PedidoItens (StatusPedido status) {
+    public PedidoItens(StatusPedido status) {
 
         this.status = status;
 
@@ -51,8 +64,28 @@ public class PedidoItens {
         this.status = status;
     }
 
-    public void addProdutos (Produto produto) {produtos.add(produto);}
-    public void removeProdutos (Produto produto) {produtos.remove(produto);}
+    public void addProdutos(Produto produto) {
+        produtos.add(produto);
+    }
 
+    public void removeProdutos(Produto produto) {
+        produtos.remove(produto);
+    }
 
+    public Double subTotal() {
+        return preço * quantidade;
+    }
+
+    @Override
+    public String toString() {
+        return "O pedido equivale a: "
+                + getProduto().getNome()
+                +", no valor de: R$"
+                + getProduto().getPreço()
+                + ", sua quantidade é de: "
+                + getQuantidade()
+                + ", totalizando: R$"
+                + subTotal();
+
+    }
 }

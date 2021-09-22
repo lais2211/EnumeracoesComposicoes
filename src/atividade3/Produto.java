@@ -5,6 +5,8 @@ public class Produto {
     private String nome;
     private Double preço;
 
+    public  Produto() {}
+
     public Produto (String nome, Double preço) {
 
         this.nome = nome;

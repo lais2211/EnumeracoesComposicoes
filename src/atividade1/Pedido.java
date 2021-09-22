@@ -9,6 +9,8 @@ public class Pedido {
     private Date momento;
     private Entrega status;
 
+    public  Pedido (){}
+
     public Pedido(Integer id, Date momento, Entrega status) {
         this.id =id;
         this.momento=momento;

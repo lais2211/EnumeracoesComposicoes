@@ -7,6 +7,7 @@ public class Cliente {
     private String email;
     private Date dataNascimento;
 
+    public Cliente (){}
 
     public Cliente (String nome, String email, Date dataNascimento) {
 

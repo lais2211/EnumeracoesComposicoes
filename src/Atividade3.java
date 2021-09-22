@@ -40,11 +40,13 @@ public class Atividade3 {
             Double preço = sc.nextDouble();
             System.out.println("Digite a quantidade do produto: ");
             Integer quantidade = sc.nextInt();
+            Produto produto = new Produto (nome,preço);
+            PedidoItens pedido = new PedidoItens(quantidade,preço,produto);
+            }
 
-            Produto produto = new Produto(nome,preço);
-            PedidoItens quant = new PedidoItens(quantidade);
-            quant.addProdutos(produto);
-        }
+        System.out.println("Cliente: " + cliente.getNome()+ ", tem o pedido com status de: "+ sta.getStatus());
+
+
 
 
 

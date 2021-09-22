@@ -12,6 +12,8 @@ public class Funcionario {
 
     List <ContratoHora> contratos = new ArrayList <>();
 
+    public Funcionario (){}
+
     public Funcionario(String nome, WorkLevel nivel, Double salarioBase, Departamento departamento) {
         this.nome = nome;
         this.nivel = nivel;

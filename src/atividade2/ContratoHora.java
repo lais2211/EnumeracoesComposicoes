@@ -7,6 +7,8 @@ public class ContratoHora {
     private Double valor;
     private Integer horas;
 
+    public ContratoHora (){}
+
     public ContratoHora(Date data,Double valor,Integer horas) {
         this.data = data;
         this.valor = valor;
