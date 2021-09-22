@@ -1,17 +1,10 @@
 package atividade3;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PedidoItens {
 
     private Integer quantidade;
     private Double preço;
     private Produto produto;
-
-    private StatusPedido status;
-
-    List<Produto> produtos = new ArrayList<>();
 
     public PedidoItens (){}
 
@@ -46,31 +39,6 @@ public class PedidoItens {
         this.produto = produto;
     }
 
-    public List<Produto> getProdutos() {
-        return produtos;
-    }
-
-    public PedidoItens(StatusPedido status) {
-
-        this.status = status;
-
-    }
-
-    public StatusPedido getStatus() {
-        return status;
-    }
-
-    public void setStatus(StatusPedido status) {
-        this.status = status;
-    }
-
-    public void addProdutos(Produto produto) {
-        produtos.add(produto);
-    }
-
-    public void removeProdutos(Produto produto) {
-        produtos.remove(produto);
-    }
 
     public Double subTotal() {
         return preço * quantidade;

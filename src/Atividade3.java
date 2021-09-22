@@ -1,7 +1,4 @@
-import atividade3.Cliente;
-import atividade3.PedidoItens;
-import atividade3.Produto;
-import atividade3.StatusPedido;
+import atividade3.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,7 +8,7 @@ import java.util.Date;
 public class Atividade3 {
     public static void main(String[] args) throws ParseException {
         Scanner sc= new Scanner(System.in);
-        SimpleDateFormat dataFormato = new SimpleDateFormat ("DD/MM/YYYY");
+        SimpleDateFormat dataFormato = new SimpleDateFormat ("dd/MM/yyy");
 
 
         System.out.println("Coloque os dados do cliente:");
@@ -19,7 +16,7 @@ public class Atividade3 {
         String name = sc.nextLine();
         System.out.println("Email: ");
         String email = sc.nextLine();
-        System.out.println("Data de nascimento: (dd/mm/yyyy");
+        System.out.println("Data de nascimento: (dd/mm/yyyy)");
         Date dataNascimento = dataFormato.parse(sc.nextLine());
 
         Cliente cliente = new Cliente(name,email,dataNascimento);
@@ -27,7 +24,9 @@ public class Atividade3 {
         System.out.println("Coloque o status do produto:");
         System.out.println("STATUS: ");
         String status = sc.nextLine();
-        PedidoItens sta = new PedidoItens (StatusPedido.valueOf(status));
+        Pedido sta = new Pedido (StatusPedido.valueOf(status));
+
+        Pedido pedido = new Pedido(new Date());
 
         System.out.println("Quantos produtos nesse pedido:");
         Integer n = sc.nextInt();
@@ -35,16 +34,20 @@ public class Atividade3 {
         for (int i = 0; i<n; i++) {
 
             System.out.println("Digite o nome do produto: ");
+            sc.nextLine();
             String nome = sc.nextLine();
             System.out.println("Digite o valor do produto: ");
             Double preço = sc.nextDouble();
             System.out.println("Digite a quantidade do produto: ");
             Integer quantidade = sc.nextInt();
             Produto produto = new Produto (nome,preço);
-            PedidoItens pedido = new PedidoItens(quantidade,preço,produto);
+            PedidoItens pedidos = new PedidoItens(quantidade,preço,produto);
+            pedido.addProdutos(pedidos);
             }
 
-        System.out.println("Cliente: " + cliente.getNome()+ ", tem o pedido com status de: "+ sta.getStatus());
+        System.out.println("Cliente: " + cliente.getNome()+ ", data de nascimento: "+ cliente.getDataNascimento()+ ", email: "+ cliente.getEmail());
+        System.out.println( "Status do pedido: "+ sta.getStatus());
+        System.out.println(pedido);
 
 
 
